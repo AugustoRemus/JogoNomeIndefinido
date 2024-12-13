@@ -4,12 +4,15 @@ extends Node
 #exporta alguma biblioteca melhor
 @export var raridades : Array[raridade] = []
 
-
+var rng = RandomNumberGenerator.new()
 
 func GerarAleatoriedade(sorteInt:int,  sorteMult:float, debug:bool):
-	var goldeNumber = randi_range(0,100)
+	#criando o numero
+	rng.randomize()
+	var goldeNumber = rng.randi_range(0,100)
 	var total:float = 0
 	var quantRaridades = raridades.size()
+	
 	
 	#adiciona aqui as parada da sorte!
 	if(debug):

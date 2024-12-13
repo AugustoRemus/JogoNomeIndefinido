@@ -9,8 +9,11 @@ extends Node
 @onready var luck_manager: Node = $LuckManager
 
 
+
 func criarArmaAleatoria():
 	luck_manager.raridades = todasRaridades.array
+
+	
 	var novaArma = arma.new()
 	
 	novaArma.tipoArma = todasArmas[randi_range(0,todasArmas.size()-1)] #pega um aleatorio da pilha e bota o nome
