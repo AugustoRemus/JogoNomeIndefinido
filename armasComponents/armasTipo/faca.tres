@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="tipoArma" load_steps=2 format=3 uid="uid://uvvkgv5cygwi"]
+
+[ext_resource type="Script" path="res://scripts/armaS/tipoArma.gd" id="1_8bnmr"]
+
+[resource]
+script = ExtResource("1_8bnmr")
+nome = "Faca"
+dano = 5.0
+speed = 15.0
+penetracao = 0.0
+genero = 1

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="raridade" load_steps=2 format=3 uid="uid://di64v0huwmei7"]
+
+[ext_resource type="Script" path="res://scripts/armaS/raridade.gd" id="1_riap5"]
+
+[resource]
+script = ExtResource("1_riap5")
+nome = "Normal"
+nomeM = "Normal"
+nomeF = "Normal"
+mult = 1.0
+numeroChance = 50

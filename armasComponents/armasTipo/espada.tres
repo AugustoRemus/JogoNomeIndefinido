@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="tipoArma" load_steps=2 format=3 uid="uid://dydvs0bfgc3x3"]
+
+[ext_resource type="Script" path="res://scripts/armaS/tipoArma.gd" id="1_e3l4m"]
+
+[resource]
+script = ExtResource("1_e3l4m")
+nome = "espada"
+dano = 10.0
+speed = 10.0
+penetracao = 2.0
+genero = 1

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="elemento" load_steps=2 format=3 uid="uid://mwpodm7klrgo"]
+
+[ext_resource type="Script" path="res://scripts/armaS/elementos.gd" id="1_fhpsh"]
+
+[resource]
+script = ExtResource("1_fhpsh")
+nomeComplementoM = Array[String](["de fogo", "de magma", "flamejante"])
+nomeComplementoF = Array[String](["de fogo", "de magma", "flamejante"])
+nomeElemento = "fogo"
+dano = 5.0
+speed = 0.0
+penetracao = 0.0

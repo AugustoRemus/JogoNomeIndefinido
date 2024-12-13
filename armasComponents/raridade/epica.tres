@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="raridade" load_steps=2 format=3 uid="uid://db31s8hi4gh12"]
+
+[ext_resource type="Script" path="res://scripts/armaS/raridade.gd" id="1_7b1s3"]
+
+[resource]
+script = ExtResource("1_7b1s3")
+nome = "epico"
+nomeM = "epico"
+nomeF = "epica"
+mult = 1.2
+numeroChance = 10

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="raridade" load_steps=2 format=3 uid="uid://dnvd6qt21q0if"]
+
+[ext_resource type="Script" path="res://scripts/armaS/raridade.gd" id="1_0s01g"]
+
+[resource]
+script = ExtResource("1_0s01g")
+nome = "Raro"
+nomeM = "Raro"
+nomeF = "Rara"
+mult = 1.1
+numeroChance = 25

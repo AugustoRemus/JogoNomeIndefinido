@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://y1i6lkbn67aq"]
+
+[ext_resource type="Texture2D" uid="uid://c6jwh3cwpe7" path="res://aceets/moedasimplesSpite.png" id="1_3d31c"]
+[ext_resource type="Script" path="res://scripts/mainGame.gd" id="1_8xjeu"]
+[ext_resource type="Texture2D" uid="uid://udsltgy0x4u2" path="res://aceets/loja.png" id="2_8mh18"]
+[ext_resource type="Script" path="res://scripts/elementos.gd" id="2_ibh35"]
+[ext_resource type="Resource" uid="uid://b6b6i6gyy2etg" path="res://armasComponents/elementos/agua.tres" id="3_viu04"]
+[ext_resource type="Resource" uid="uid://mwpodm7klrgo" path="res://armasComponents/elementos/fogo.tres" id="4_ajk05"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8xjeu")
+todosElemento = Array[ExtResource("2_ibh35")]([ExtResource("3_viu04"), ExtResource("4_ajk05")])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -76.0
+offset_top = -40.0
+offset_right = 82.0
+offset_bottom = 40.0
+color = Color(1, 0.768627, 1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, 0)
+
+[node name="recursos" type="GridContainer" parent="CanvasLayer"]
+offset_left = 4.66667
+offset_top = 4.0
+offset_right = 98.6667
+offset_bottom = 44.0
+columns = 2
+
+[node name="Moeda sprite" type="TextureRect" parent="CanvasLayer/recursos"]
+layout_mode = 2
+texture = ExtResource("1_3d31c")
+
+[node name="MoedasTxt" type="Label" parent="CanvasLayer/recursos"]
+layout_mode = 2
+text = "0"
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+offset_left = 3.33333
+offset_top = 149.667
+offset_right = 67.3333
+offset_bottom = 213.667
+
+[node name="abrirLoja" type="TextureButton" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_8mh18")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(10, 10)
+
+[connection signal="pressed" from="CanvasLayer/GridContainer/abrirLoja" to="." method="_on_abrir_loja_pressed"]
