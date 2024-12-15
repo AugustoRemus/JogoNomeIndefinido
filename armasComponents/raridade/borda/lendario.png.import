@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5rxttqvspcvm"
-path="res://.godot/imported/fogo.png-18dfb1126adecd6e98eb136c5eb3f418.ctex"
+uid="uid://dtg4o34ifjfh1"
+path="res://.godot/imported/lendario.png-cf841ff79c59ceec16f1c8379ebe2e34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://aceets/jogoui/elemento/fogo.png"
-dest_files=["res://.godot/imported/fogo.png-18dfb1126adecd6e98eb136c5eb3f418.ctex"]
+source_file="res://armasComponents/raridade/borda/lendario.png"
+dest_files=["res://.godot/imported/lendario.png-cf841ff79c59ceec16f1c8379ebe2e34.ctex"]
 
 [params]
 

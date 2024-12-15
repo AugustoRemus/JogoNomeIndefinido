@@ -14,6 +14,5 @@ enum Genero { MASCULINO, FEMININO }
 @export var speed: float
 @export var penetracao: float
 
-
-
-var sprite: Sprite2D
+@export_category("cosmetico")
+@export var sprite: Texture2D

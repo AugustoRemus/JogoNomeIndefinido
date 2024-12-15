@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="arrayRaridade" load_steps=7 format=3 uid="uid://ies45ww7xhul"]
+[gd_resource type="Resource" script_class="arrayRaridade" load_steps=8 format=3 uid="uid://ies45ww7xhul"]
 
 [ext_resource type="Script" path="res://scripts/armaS/raridade.gd" id="1_iogfm"]
 [ext_resource type="Resource" uid="uid://di64v0huwmei7" path="res://armasComponents/raridade/normal.tres" id="2_nutlm"]
 [ext_resource type="Resource" uid="uid://cn0qd373ra6fx" path="res://armasComponents/raridade/incomum.tres" id="3_s3yth"]
 [ext_resource type="Resource" uid="uid://dnvd6qt21q0if" path="res://armasComponents/raridade/raro.tres" id="4_7kkqw"]
 [ext_resource type="Resource" uid="uid://db31s8hi4gh12" path="res://armasComponents/raridade/epica.tres" id="5_cwr0x"]
+[ext_resource type="Resource" uid="uid://cd7o35l8lwp7r" path="res://armasComponents/raridade/lendaria.tres" id="6_n5xs3"]
 [ext_resource type="Script" path="res://scripts/armaS/arrayRaridade.gd" id="6_n655g"]
 
 [resource]
 script = ExtResource("6_n655g")
-array = Array[ExtResource("1_iogfm")]([ExtResource("2_nutlm"), ExtResource("3_s3yth"), ExtResource("4_7kkqw"), ExtResource("5_cwr0x")])
+array = Array[ExtResource("1_iogfm")]([ExtResource("2_nutlm"), ExtResource("3_s3yth"), ExtResource("4_7kkqw"), ExtResource("5_cwr0x"), ExtResource("6_n5xs3")])

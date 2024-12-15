@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="tipoArma" load_steps=2 format=3 uid="uid://bpjhfggkycbdo"]
+[gd_resource type="Resource" script_class="tipoArma" load_steps=3 format=3 uid="uid://bpjhfggkycbdo"]
 
 [ext_resource type="Script" path="res://scripts/armaS/tipoArma.gd" id="1_d33cq"]
+[ext_resource type="Texture2D" uid="uid://dgobqoiet2dcb" path="res://aceets/jogoui/armas/machado.png" id="2_slx6n"]
 
 [resource]
 script = ExtResource("1_d33cq")
 nome = "Machado"
+genero = 0
 dano = 15.0
 speed = 5.0
 penetracao = 5.0
-genero = 0
+sprite = ExtResource("2_slx6n")

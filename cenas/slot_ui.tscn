@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c67i8gdtaci5l"]
+
+[ext_resource type="Script" path="res://scripts/Inventario/slot_ui.gd" id="1_vhc6p"]
+[ext_resource type="Texture2D" uid="uid://bfjod85nvg0xx" path="res://aceets/fundo.png" id="2_6bn40"]
+[ext_resource type="Texture2D" uid="uid://deg1pr41vekbv" path="res://armasComponents/raridade/borda/bordaComum.png" id="2_ceudo"]
+
+[node name="Slot_Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vhc6p")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+offset_bottom = 17.0
+texture = ExtResource("2_6bn40")
+
+[node name="fundo" type="Sprite2D" parent="."]
+texture = ExtResource("2_ceudo")
+
+[node name="elemento" type="Sprite2D" parent="."]
+
+[node name="arma" type="Sprite2D" parent="."]

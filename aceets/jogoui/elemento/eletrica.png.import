@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dotg4kx6yfaa7"
-path="res://.godot/imported/agua.png-b0737e66bfeb1a70bf1dcdeeba64175c.ctex"
+uid="uid://bgypprj664nay"
+path="res://.godot/imported/eletrica.png-e960e1f0d67a4d664902afa8bafad20f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://aceets/jogoui/elemento/agua.png"
-dest_files=["res://.godot/imported/agua.png-b0737e66bfeb1a70bf1dcdeeba64175c.ctex"]
+source_file="res://aceets/jogoui/elemento/eletrica.png"
+dest_files=["res://.godot/imported/eletrica.png-e960e1f0d67a4d664902afa8bafad20f.ctex"]
 
 [params]
 

@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="raridade" load_steps=2 format=3 uid="uid://di64v0huwmei7"]
+[gd_resource type="Resource" script_class="raridade" load_steps=3 format=3 uid="uid://di64v0huwmei7"]
 
 [ext_resource type="Script" path="res://scripts/armaS/raridade.gd" id="1_riap5"]
+[ext_resource type="Texture2D" uid="uid://deg1pr41vekbv" path="res://armasComponents/raridade/borda/bordaComum.png" id="2_ehybi"]
 
 [resource]
 script = ExtResource("1_riap5")
 nome = "Normal"
-nomeM = "Normal"
-nomeF = "Normal"
+nomeM = "normal"
+nomeF = "normal"
 mult = 1.0
 numeroChance = 50
+sprite = ExtResource("2_ehybi")

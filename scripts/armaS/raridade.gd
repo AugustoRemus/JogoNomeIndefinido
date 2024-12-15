@@ -17,3 +17,6 @@ class_name raridade
 
 ##numero que na somatoria vai dar a chance total de cair esse item quando somar todas as coisas
 @export var numeroChance: int
+
+
+@export var sprite: Texture2D

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="tipoArma" load_steps=3 format=3 uid="uid://de046n8abri1d"]
+
+[ext_resource type="Script" path="res://scripts/armaS/tipoArma.gd" id="1_2v5ml"]
+[ext_resource type="Texture2D" uid="uid://bk18bks05fnbw" path="res://aceets/jogoui/armas/materteloaseCerto.png" id="2_7wtbw"]
+
+[resource]
+script = ExtResource("1_2v5ml")
+nome = "Martelo"
+genero = 0
+dano = 19.0
+speed = 4.0
+penetracao = 2.0
+sprite = ExtResource("2_7wtbw")

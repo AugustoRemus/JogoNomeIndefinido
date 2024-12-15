@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="tipoArma" load_steps=2 format=3 uid="uid://uvvkgv5cygwi"]
+[gd_resource type="Resource" script_class="tipoArma" load_steps=3 format=3 uid="uid://uvvkgv5cygwi"]
 
 [ext_resource type="Script" path="res://scripts/armaS/tipoArma.gd" id="1_8bnmr"]
+[ext_resource type="Texture2D" uid="uid://jepxkilvkfwv" path="res://aceets/jogoui/armas/faca.png" id="2_vt1gr"]
 
 [resource]
 script = ExtResource("1_8bnmr")
 nome = "Faca"
+genero = 1
 dano = 5.0
 speed = 15.0
 penetracao = 0.0
-genero = 1
+sprite = ExtResource("2_vt1gr")

@@ -20,6 +20,9 @@ var efeito: Sprite2D #texture
 @export  var speed: float
 @export var penetracao: float
 
+@export_category("cosmetico")
+@export var sprite: Texture2D
+
 #var sprite: Sprite2D
 
 func getNomeM():

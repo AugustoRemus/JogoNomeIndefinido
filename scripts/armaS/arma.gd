@@ -19,26 +19,19 @@ var tipoArma: tipoArma
 
 
 #raridade
-var raridade: raridade
-var multRariIndiv: float
+@export var raridade: raridade
+@export var multRariIndiv: float
 
 #lvl
-var nivel: int = 0
-var experiencia: int = 0
-var experienciaProxNivel: int = 10
+@export var nivel: int = 0
+@export var experiencia: int = 0
+@export var experienciaProxNivel: int = 10
 
 
 #region name
 
-var _nome = ""
-var nome: String: 
-	get:
-		if _nome == "":
-			if tipoArma.genero == Genero.MASCULINO:
-				_nome = tipoArma.nome + " " + elemento.getNomeM() + " " + raridade.nomeM
-			elif tipoArma.genero == Genero.FEMININO:
-				_nome = tipoArma.nome + " " + elemento.getNomeF() + " " + raridade.nomeF
-		return _nome
+@export var nome: String
+
 
 #endregion
 
@@ -47,35 +40,23 @@ var nome: String:
 #region status
 
 #dano
-var _dano = -1
-var dano: float: 
-	get:
-		if _dano == -1:
-			_dano = ((elemento.dano + tipoArma.dano) * (1.0 + ((nivel) * 0.05))) * raridade.mult # + raridadeindiv
-		return _dano
+
+@export var dano: float
 
 #speed
-var _speed = -1
-var speed: float: 
-	get:
-		if _speed == -1:
-			_speed = ((elemento.speed + tipoArma.speed) * (1.0 + ((nivel) * 0.05))) * raridade.mult # + raridadeindiv
-		return _speed
+
+@export var speed: float
 
 #penetracao
-var _penetracao = -1
-var penetracao: float: 
-	get:
-		if _penetracao == -1:
-			_penetracao = ((elemento.penetracao + tipoArma.penetracao) * (1.0 + ((nivel) * 0.05))) * raridade.mult # + raridadeindiv
-		return _penetracao
+
+@export var penetracao: float
 		
 		
 		
 func atualizarStatus():
-	_dano = ((elemento.dano + tipoArma.dano) * (1.0 + ((nivel) * 0.05))) * raridade.mult
-	_penetracao = ((elemento.penetracao + tipoArma.penetracao) * (1.0 + ((nivel) * 0.05))) * raridade.mult 
-	_speed = ((elemento.speed + tipoArma.speed) * (1.0 + ((nivel) * 0.05))) * raridade.mult 
+	dano = ((elemento.dano + tipoArma.dano) * (1.0 + ((nivel) * 0.05))) * raridade.mult
+	penetracao = ((elemento.penetracao + tipoArma.penetracao) * (1.0 + ((nivel) * 0.05))) * raridade.mult 
+	speed = ((elemento.speed + tipoArma.speed) * (1.0 + ((nivel) * 0.05))) * raridade.mult 
 
 
 #endregion
@@ -109,6 +90,21 @@ func adicionarXp(xp):
 
 #endregion
 
+
+func getNome():
+	return nome
+
+#chama 1 vez pra arrumar
+func setStart():
+	#setaNome
+	if tipoArma.genero == Genero.MASCULINO:
+		nome = tipoArma.nome + " " + elemento.getNomeM() + " " + raridade.nomeM
+	elif tipoArma.genero == Genero.FEMININO:
+		nome = tipoArma.nome + " " + elemento.getNomeF() + " " + raridade.nomeF
+
+	dano = ((elemento.dano + tipoArma.dano) * (1.0 + ((nivel) * 0.05))) * raridade.mult # + ra
+	speed = ((elemento.speed + tipoArma.speed) * (1.0 + ((nivel) * 0.05))) * raridade.mult # + rarida
+	penetracao = ((elemento.penetracao + tipoArma.penetracao) * (1.0 + ((nivel) * 0.05))) * raridade.mult # + raridadeindiv
 
 func exibirStatus():
 	atualizarStatus()

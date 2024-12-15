@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="tipoArma" load_steps=3 format=3 uid="uid://b4excpcbuifo1"]
+
+[ext_resource type="Script" path="res://scripts/armaS/tipoArma.gd" id="1_nwhxb"]
+[ext_resource type="Texture2D" uid="uid://b7w33fo0ym6oe" path="res://aceets/jogoui/armas/cimitarra.png" id="2_84665"]
+
+[resource]
+script = ExtResource("1_nwhxb")
+nome = "Cimitarra"
+genero = 1
+dano = 12.0
+speed = 6.0
+penetracao = 0.0
+sprite = ExtResource("2_84665")

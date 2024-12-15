@@ -9,7 +9,7 @@ extends Node
 @onready var luck_manager: Node = $LuckManager
 
 
-
+#botar aqui os parametros da sorte
 func criarArmaAleatoria():
 	luck_manager.raridades = todasRaridades.array
 
@@ -19,6 +19,7 @@ func criarArmaAleatoria():
 	novaArma.tipoArma = todasArmas[randi_range(0,todasArmas.size()-1)] #pega um aleatorio da pilha e bota o nome
 	novaArma.elemento = todosElemento[randi_range(0,todosElemento.size()-1)] #pega um aleatorio do elemento
 	novaArma.raridade = luck_manager.GerarAleatoriedade(0,0,false)
+	novaArma.setStart()
 	#novaArma.nivel = 0
 	
 	return novaArma
@@ -27,9 +28,10 @@ func criarArmaAleatoria():
 
 
 func _ready() -> void:
-	var arma = criarArmaAleatoria()
-	InventarioPlayer.playerInventory.append(arma)
-	InventarioPlayer.exibirInv()
+	pass
+	#var arma = criarArmaAleatoria()
+	#InventarioPlayer.playerInventory.append(arma)
+	#InventarioPlayer.exibirInv()
 	
 
 	#arma.exibirStatus()

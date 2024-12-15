@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="tipoArma" load_steps=2 format=3 uid="uid://dydvs0bfgc3x3"]
+[gd_resource type="Resource" script_class="tipoArma" load_steps=3 format=3 uid="uid://dydvs0bfgc3x3"]
 
 [ext_resource type="Script" path="res://scripts/armaS/tipoArma.gd" id="1_e3l4m"]
+[ext_resource type="Texture2D" uid="uid://bp54fnw3l3wic" path="res://aceets/jogoui/armas/espada.png" id="2_b5dud"]
 
 [resource]
 script = ExtResource("1_e3l4m")
-nome = "espada"
+nome = "Espada"
+genero = 1
 dano = 10.0
 speed = 10.0
 penetracao = 2.0
-genero = 1
+sprite = ExtResource("2_b5dud")

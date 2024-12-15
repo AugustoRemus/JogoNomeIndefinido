@@ -6,21 +6,29 @@ extends Node
 
 var rng = RandomNumberGenerator.new()
 
+
+
+
 func GerarAleatoriedade(sorteInt:int,  sorteMult:float, debug:bool):
 	#criando o numero
 	rng.randomize()
-	var goldeNumber = rng.randi_range(0,100)
+	
+	
 	var total:float = 0
 	var quantRaridades = raridades.size()
 	
 	
 	#adiciona aqui as parada da sorte!
-	if(debug):
-		print("golden")
-		print(goldeNumber)
+
 	
 	for raridade in raridades:
 		total += raridade.numeroChance
+	
+	var goldeNumber = rng.randi_range(0,total)
+	
+	if(debug):
+		print("golden")
+		print(goldeNumber)
 	
 	if(debug):
 		print(total)

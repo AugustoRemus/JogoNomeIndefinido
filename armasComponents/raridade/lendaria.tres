@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="raridade" load_steps=3 format=3 uid="uid://cd7o35l8lwp7r"]
+
+[ext_resource type="Script" path="res://scripts/armaS/raridade.gd" id="1_fy662"]
+[ext_resource type="Texture2D" uid="uid://dtg4o34ifjfh1" path="res://armasComponents/raridade/borda/lendario.png" id="2_g4dvp"]
+
+[resource]
+script = ExtResource("1_fy662")
+nome = "lendaria"
+nomeM = "lendario"
+nomeF = "lendaria"
+mult = 1.5
+numeroChance = 2
+sprite = ExtResource("2_g4dvp")
