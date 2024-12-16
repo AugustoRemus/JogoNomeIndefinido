@@ -74,8 +74,9 @@ todasArmas = Array[ExtResource("11_ywd85")]([ExtResource("12_7k2i6"), ExtResourc
 [node name="Inventario_Iu" parent="." instance=ExtResource("6_ktj2e")]
 visible = false
 
-[node name="Player" parent="." instance=ExtResource("19_doc7j")]
+[node name="Player" parent="." node_paths=PackedStringArray("inventario") instance=ExtResource("19_doc7j")]
 position = Vector2(6, 2)
+inventario = NodePath("../Inventario_Iu")
 
 [connection signal="pressed" from="CanvasLayer/GridContainer/abrirLoja" to="." method="_on_abrir_loja_pressed"]
 [connection signal="pressed" from="CanvasLayer/GridContainer/AbrirInventario" to="." method="_on_abrir_inventario_pressed"]

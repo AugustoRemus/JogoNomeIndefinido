@@ -9,29 +9,10 @@ extends Node2D
 
 @onready var inventario: Control = $Inventario_Iu
 
-#botar no player
-var itemAtual
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		if Input.is_action_pressed("itemDireita"):
-			itemAtual = cuidaItem(itemAtual + 1)
-			inventario.atualizarArmaMao(itemAtual)
-			
-		elif Input.is_action_pressed("itemEsquerda"):
-			itemAtual = cuidaItem(itemAtual - 1)
-			inventario.atualizarArmaMao(itemAtual)		
 
-func cuidaItem(int):
-	if int < 1:
-		return 5
-	if int > 5:
-		return 1
-	return int 
-	
-	
 func _ready() -> void:
-	itemAtual = 0
+	
 	pass
 	
 	

@@ -61,8 +61,10 @@ func mostrarStats(int):
 		#print(Global.invPlayer[int -1].nome)
 	
 	
-
+	#return ArmaAtualGrid
 	
+func getArmaAtual(int):
+	return Global.getArma(int - 1)
 
 
 func atualizar_slots(itens:Array[arma]):
