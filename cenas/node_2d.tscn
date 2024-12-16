@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://y1i6lkbn67aq"]
+[gd_scene load_steps=20 format=3 uid="uid://y1i6lkbn67aq"]
 
 [ext_resource type="Texture2D" uid="uid://c6jwh3cwpe7" path="res://aceets/moedasimplesSpite.png" id="1_3d31c"]
 [ext_resource type="Script" path="res://scripts/mainGame.gd" id="1_8xjeu"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://cxxt0glyxk6pt" path="res://armasComponents/armasTipo/bastao.tres" id="15_rg0tt"]
 [ext_resource type="Resource" uid="uid://b4excpcbuifo1" path="res://armasComponents/armasTipo/cimitarra.tres" id="16_g5cx4"]
 [ext_resource type="Resource" uid="uid://de046n8abri1d" path="res://armasComponents/armasTipo/martelo.tres" id="17_11s8w"]
+[ext_resource type="PackedScene" uid="uid://btkrj876math0" path="res://cenas/player.tscn" id="19_doc7j"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_8xjeu")
@@ -72,6 +73,9 @@ todasArmas = Array[ExtResource("11_ywd85")]([ExtResource("12_7k2i6"), ExtResourc
 
 [node name="Inventario_Iu" parent="." instance=ExtResource("6_ktj2e")]
 visible = false
+
+[node name="Player" parent="." instance=ExtResource("19_doc7j")]
+position = Vector2(6, 2)
 
 [connection signal="pressed" from="CanvasLayer/GridContainer/abrirLoja" to="." method="_on_abrir_loja_pressed"]
 [connection signal="pressed" from="CanvasLayer/GridContainer/AbrirInventario" to="." method="_on_abrir_inventario_pressed"]
