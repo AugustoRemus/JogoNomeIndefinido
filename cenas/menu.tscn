@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbl8u0s7yggxa"]
+
+[ext_resource type="Texture2D" uid="uid://bpgj1lw7yxcsy" path="res://sprites/fundoPronto.png" id="1_18kge"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_xdbqo"]
+[ext_resource type="Texture2D" uid="uid://tygv8mwvem05" path="res://sprites/teste.png" id="2_i50m6"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_xdbqo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 720.0
+texture = ExtResource("1_18kge")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 410.0
+offset_top = 318.0
+offset_right = 450.0
+offset_bottom = 358.0
+scale = Vector2(8.58564, 3.85905)
+texture_normal = ExtResource("2_i50m6")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 7.0
+offset_right = 52.0
+offset_bottom = 30.0
+scale = Vector2(0.459677, 0.837781)
+text = "iniciar"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

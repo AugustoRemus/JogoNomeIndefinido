@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="upgrade" load_steps=3 format=3 uid="uid://cnxeye0j4w0ea"]
+
+[ext_resource type="Script" path="res://scripts/upgrades.gd" id="1_axgc3"]
+[ext_resource type="Texture2D" uid="uid://tygv8mwvem05" path="res://sprites/teste.png" id="2_oiyq5"]
+
+[resource]
+script = ExtResource("1_axgc3")
+nome = "Acelerar Bola"
+descricao = "Bola ganha mais 
+speed
++ 10 pontos"
+vidasPlayer = 0
+kikadas = 10.0
+valorKikada = 0.0
+dificultador = 0
+tamanhoPlayer = 0.0
+tamanhoBola = 0.0
+playerSpeed = 0.0
+speedBola = 30.0
+kikadasParaEscolha = 0
+kikadaParaProximaEscolha = 0
+sprite = ExtResource("2_oiyq5")

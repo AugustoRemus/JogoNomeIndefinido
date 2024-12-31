@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxo77a4qbjlv6"]
+
+[ext_resource type="Script" path="res://scripts/upgrade_manager.gd" id="1_wpae1"]
+[ext_resource type="PackedScene" uid="uid://bubvnohvaus6g" path="res://cenas/upgrade_ui.tscn" id="2_0wiua"]
+
+[node name="UpgradeManager" type="Node2D"]
+script = ExtResource("1_wpae1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Tudo" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = 149.0
+offset_right = -5.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+columns = 3
+
+[node name="upgradeUi" parent="CanvasLayer/Tudo" instance=ExtResource("2_0wiua")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="upgradeUi2" parent="CanvasLayer/Tudo" instance=ExtResource("2_0wiua")]
+layout_mode = 2
+
+[node name="upgradeUi3" parent="CanvasLayer/Tudo" instance=ExtResource("2_0wiua")]
+layout_mode = 2
+
+[connection signal="button_down" from="CanvasLayer/Tudo/upgradeUi" to="." method="_on_upgrade_ui_button_down"]
+[connection signal="pressed" from="CanvasLayer/Tudo/upgradeUi" to="." method="_on_upgrade_ui_pressed"]
+[connection signal="pressed" from="CanvasLayer/Tudo/upgradeUi2" to="." method="_on_upgrade_ui_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Tudo/upgradeUi3" to="." method="_on_upgrade_ui_3_pressed"]

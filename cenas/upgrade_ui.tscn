@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://bubvnohvaus6g"]
+
+[ext_resource type="Texture2D" uid="uid://3k31nte1wqly" path="res://funcoCerto.png" id="1_kva2q"]
+[ext_resource type="Script" path="res://scripts/upgrade_ui.gd" id="1_wjbdj"]
+[ext_resource type="Resource" uid="uid://cbg4787t5y3ga" path="res://upgrades/debug/debug.tres" id="2_vcr7e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jfi7v"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x8pg0"]
+load_path = "res://.godot/imported/teste.png-7ee0730028f2d9f905662eea0ed9f502.ctex"
+
+[node name="upgradeUi" type="TextureButton"]
+offset_right = 38.0
+offset_bottom = 60.0
+texture_normal = ExtResource("1_kva2q")
+script = ExtResource("1_wjbdj")
+debug = ExtResource("2_vcr7e")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_jfi7v")
+patch_margin_left = 40
+patch_margin_top = 5
+patch_margin_right = 40
+patch_margin_bottom = 6
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = -51.0
+offset_top = 41.0
+offset_right = 89.0
+offset_bottom = 41.0
+texture = SubResource("CompressedTexture2D_x8pg0")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -26.0
+offset_right = 137.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.18, 0.18)
+mouse_filter = 2
+
+[node name="nome" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Nome do upgrade"
+
+[node name="Descr" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 10
+text = "descricao do upgrade do 
+upgrade pode ser grande"
+clip_text = true

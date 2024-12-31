@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="upgrade" load_steps=3 format=3 uid="uid://cy3ss5d8c4dtt"]
+
+[ext_resource type="Script" path="res://scripts/upgrades.gd" id="1_sc16l"]
+[ext_resource type="Texture2D" uid="uid://tygv8mwvem05" path="res://sprites/teste.png" id="2_brelo"]
+
+[resource]
+script = ExtResource("1_sc16l")
+nome = "Bola Maior"
+descricao = "aumenta o tamanho da 
+bola"
+vidasPlayer = 0
+kikadas = 0.0
+valorKikada = 0.0
+dificultador = 0
+tamanhoPlayer = 0.0
+tamanhoBola = 0.02
+playerSpeed = 0.0
+speedBola = 0.0
+kikadasParaEscolha = 0
+kikadaParaProximaEscolha = 0
+sprite = ExtResource("2_brelo")

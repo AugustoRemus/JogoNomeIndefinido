@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://h56hal5kahcu"]
+
+[ext_resource type="Texture2D" uid="uid://d3y8rrm4rrbqe" path="res://sprites/plataforma.png" id="1_j7388"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0j2af"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(196.5, 0)
+scale = Vector2(36.7188, 1)
+texture = ExtResource("1_j7388")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+shape = SubResource("WorldBoundaryShape2D_0j2af")

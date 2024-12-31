@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddr1qhykwkjt8"]
+
+[ext_resource type="Script" path="res://scripts/bola.gd" id="1_7rpv3"]
+[ext_resource type="Texture2D" uid="uid://dgbhosakxa2qa" path="res://sprites/png,bola.png" id="2_6bm86"]
+[ext_resource type="Script" path="res://scripts/sprite_2d.gd" id="3_oq0ur"]
+[ext_resource type="AudioStream" uid="uid://bmb4f87sacye6" path="res://sprites/Record (online-voice-recorder.com).mp3" id="4_dji5l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_00ihr"]
+radius = 66.6667
+
+[node name="bola" type="CharacterBody2D"]
+scale = Vector2(0.09, 0.09)
+script = ExtResource("1_7rpv3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("2_6bm86")
+script = ExtResource("3_oq0ur")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_00ihr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dji5l")

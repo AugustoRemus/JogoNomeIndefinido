@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="upgrade" load_steps=3 format=3 uid="uid://cu07l2yktegqf"]
+
+[ext_resource type="Script" path="res://scripts/upgrades.gd" id="1_g6ait"]
+[ext_resource type="Texture2D" uid="uid://tygv8mwvem05" path="res://sprites/teste.png" id="2_5221r"]
+
+[resource]
+script = ExtResource("1_g6ait")
+nome = "bola ++ speed"
+descricao = "aumenta a velocidade 
+da bola"
+vidasPlayer = 0
+kikadas = 10.0
+valorKikada = 0.0
+dificultador = 0
+tamanhoPlayer = 0.0
+tamanhoBola = 0.0
+playerSpeed = 0.0
+speedBola = 20.0
+kikadasParaEscolha = 0
+kikadaParaProximaEscolha = 0
+sprite = ExtResource("2_5221r")

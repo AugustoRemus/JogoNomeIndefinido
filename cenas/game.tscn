@@ -1,0 +1,154 @@
+[gd_scene load_steps=20 format=3 uid="uid://djc2nqq42urhi"]
+
+[ext_resource type="Script" path="res://scripts/Manager.gd" id="1_qoais"]
+[ext_resource type="PackedScene" uid="uid://ch13fnpy6roml" path="res://cenas/character_body_2d.tscn" id="1_re5hw"]
+[ext_resource type="PackedScene" uid="uid://h56hal5kahcu" path="res://cenas/parede.tscn" id="2_hthl7"]
+[ext_resource type="Texture2D" uid="uid://bpgj1lw7yxcsy" path="res://sprites/fundoPronto.png" id="2_lkt7e"]
+[ext_resource type="PackedScene" uid="uid://ddr1qhykwkjt8" path="res://cenas/bola.tscn" id="3_1o4ex"]
+[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="4_axl6u"]
+[ext_resource type="Script" path="res://scripts/morte.gd" id="5_0vkos"]
+[ext_resource type="PackedScene" uid="uid://cxo77a4qbjlv6" path="res://cenas/upgrade_manager.tscn" id="6_6qoau"]
+[ext_resource type="Script" path="res://scripts/upgrades.gd" id="7_wj8ip"]
+[ext_resource type="Resource" uid="uid://cnxeye0j4w0ea" path="res://upgrades/bola+speed.tres" id="8_h1cp4"]
+[ext_resource type="Resource" uid="uid://bkhncmtc3gr31" path="res://upgrades/+1vida.tres" id="8_xw7do"]
+[ext_resource type="Resource" uid="uid://e25rybmbii8t" path="res://upgrades/+10pontos.tres" id="9_pxaim"]
+[ext_resource type="Resource" uid="uid://dx33yrem32eut" path="res://upgrades/+valorKikada.tres" id="10_8f2ph"]
+[ext_resource type="Resource" uid="uid://dk20rqa36wahl" path="res://upgrades/aumentaPlayer.tres" id="11_bhnmd"]
+[ext_resource type="Resource" uid="uid://cy3ss5d8c4dtt" path="res://upgrades/bolaMaior.tres" id="13_qcsm0"]
+[ext_resource type="Resource" uid="uid://cu07l2yktegqf" path="res://upgrades/bolaSpeed.tres" id="14_8fvk4"]
+[ext_resource type="Resource" uid="uid://b4ogf8l04rp4m" path="res://upgrades/dificuldade.tres" id="15_u43o0"]
+[ext_resource type="Resource" uid="uid://djuwvhav62tt7" path="res://upgrades/playerspeed++.tres" id="16_b431p"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h6d6n"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_qoais")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -212.0
+offset_top = -129.0
+offset_right = 220.0
+offset_bottom = 121.0
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.50002, -12)
+scale = Vector2(0.365741, 0.408333)
+texture = ExtResource("2_lkt7e")
+
+[node name="GridContainer3" type="GridContainer" parent="."]
+offset_left = -169.0
+offset_top = -118.0
+offset_right = 365.0
+offset_bottom = -95.0
+size_flags_stretch_ratio = 1.05
+mouse_filter = 2
+theme_override_constants/h_separation = 50
+columns = 3
+
+[node name="GridContainer2" type="GridContainer" parent="GridContainer3"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+columns = 2
+
+[node name="kikadas_" type="Label" parent="GridContainer3/GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "pontos:"
+horizontal_alignment = 1
+
+[node name="kikadas" type="Label" parent="GridContainer3/GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="GridContainer3" type="GridContainer" parent="GridContainer3"]
+layout_mode = 2
+columns = 2
+
+[node name="Kikadas_" type="Label" parent="GridContainer3/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ProxUp:"
+
+[node name="kikadas" type="Label" parent="GridContainer3/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer3"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+columns = 8
+
+[node name="label_" type="Label" parent="GridContainer3/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "vidas:"
+
+[node name="vidas" type="Label" parent="GridContainer3/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+
+[node name="BolaSPanwLocal" type="Node2D" parent="."]
+position = Vector2(0, -65)
+
+[node name="bola" parent="." node_paths=PackedStringArray("nodo") instance=ExtResource("3_1o4ex")]
+position = Vector2(0, -65)
+nodo = NodePath("..")
+
+[node name="player" parent="." instance=ExtResource("1_re5hw")]
+position = Vector2(0, 112)
+speed = 200
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+script = ExtResource("4_axl6u")
+
+[node name="paredes" type="Node" parent="."]
+
+[node name="StaticBody2D" parent="paredes" instance=ExtResource("2_hthl7")]
+position = Vector2(-177, 20)
+rotation = 1.5708
+
+[node name="StaticBody2D2" parent="paredes" instance=ExtResource("2_hthl7")]
+position = Vector2(177, 21)
+rotation = -1.5708
+
+[node name="StaticBody2D3" parent="paredes" instance=ExtResource("2_hthl7")]
+position = Vector2(-2, -86)
+rotation = -3.14159
+
+[node name="morte" type="Area2D" parent="."]
+position = Vector2(-1, 129)
+script = ExtResource("5_0vkos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="morte"]
+shape = SubResource("WorldBoundaryShape2D_h6d6n")
+
+[node name="Timer" type="Timer" parent="morte"]
+wait_time = 1.5
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="UpgradeManager" parent="CanvasLayer" instance=ExtResource("6_6qoau")]
+lista = Array[ExtResource("7_wj8ip")]([ExtResource("8_xw7do"), ExtResource("9_pxaim"), ExtResource("10_8f2ph"), ExtResource("11_bhnmd"), ExtResource("8_h1cp4"), ExtResource("13_qcsm0"), ExtResource("14_8fvk4"), ExtResource("15_u43o0"), ExtResource("16_b431p")])
+
+[node name="iniciar" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="pegou" from="bola" to="." method="_on_bola_pegou"]
+[connection signal="tremer" from="bola" to="Camera2D" method="_on_bola_tremer"]
+[connection signal="debug" from="player" to="." method="_on_player_debug"]
+[connection signal="body_entered" from="morte" to="." method="_on_morte_body_entered"]
+[connection signal="body_entered" from="morte" to="morte" method="_on_body_entered"]
+[connection signal="timeout" from="morte/Timer" to="." method="_on_timer_timeout"]
+[connection signal="escolhido1" from="CanvasLayer/UpgradeManager" to="." method="_on_upgrade_manager_escolhido_1"]
+[connection signal="escolhido2" from="CanvasLayer/UpgradeManager" to="." method="_on_upgrade_manager_escolhido_2"]
+[connection signal="escolhido3" from="CanvasLayer/UpgradeManager" to="." method="_on_upgrade_manager_escolhido_3"]
+[connection signal="timeout" from="iniciar" to="." method="_on_iniciar_timeout"]
